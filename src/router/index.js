@@ -3,8 +3,8 @@ import HomeView from "../views/HomeView.vue";
 import CityView from "../views/CityView.vue";
 import { getObj } from "./config";
 
-console.log(await getObj())
-const obj = await getObj()
+// console.log(await getObj())
+// const obj = await getObj()
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
   routes: [
@@ -26,11 +26,11 @@ const router = createRouter({
     },
   ],
 });
-obj.forEach(item=>{
-  router.addRoute(item)
-})
-// router.removeRoute('aaa')
-console.log(router.getRoutes())
+// obj.forEach(item=>{
+//   router.addRoute(item)
+// })
+// // router.removeRoute('aaa')
+// console.log(router.getRoutes())
 
 router.beforeEach((to, from, next) => {
   document.title = `${
